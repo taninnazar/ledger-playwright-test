@@ -1,0 +1,13 @@
+services:
+  tests:
+    build: .
+    environment:
+      CI: "true"
+      BASE_URL: ${BASE_URL:-https://thinking-tester-contact-list.herokuapp.com}
+      TEST_USER_EMAIL: ${TEST_USER_EMAIL:-}
+      TEST_USER_PASSWORD: ${TEST_USER_PASSWORD:-}
+      TEST_USER_FIRST_NAME: ${TEST_USER_FIRST_NAME:-Ledger}
+      TEST_USER_LAST_NAME: ${TEST_USER_LAST_NAME:-Tester}
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results

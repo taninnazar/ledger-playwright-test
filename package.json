@@ -1,0 +1,33 @@
+{
+  "name": "ledger-playwright-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright UI and API test framework for the Contact List App",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=ui-chromium",
+    "test:api": "playwright test --project=api",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "docker:test": "docker compose run --rm tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taninnazar/ledger-playwright-test.git"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "qa",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^22.17.0",
+    "typescript": "^5.9.2"
+  }
+}
